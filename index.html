@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mental Playground — Calm & Explore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">🌈 <span>Mental Playground</span></div>
+    <div class="controls">
+      <input id="searchInput" placeholder="Search problems, symptoms, or methods..." />
+      <select id="tagFilter">
+        <option value="">All tags</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Playful guide to feelings, symptoms & calming methods</h1>
+      <p>Explore common mental challenges, learn symptoms, and try short calming exercises. Not a replacement for professional help.</p>
+    </section>
+
+    <section id="cards" class="cards-grid">
+      <!-- cards rendered here -->
+    </section>
+  </main>
+
+  <div id="detailModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="modalClose" class="close">✕</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc" class="muted"></p>
+
+      <div class="section">
+        <h3>Symptoms</h3>
+        <ul id="modalSymptoms"></ul>
+      </div>
+
+      <div class="section">
+        <h3>Calming Methods</h3>
+        <div id="modalMethods"></div>
+      </div>
+
+      <div class="exercise" id="exerciseArea"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div>Made with care — if you or someone is in crisis, contact a professional or emergency services.</div>
+    <div class="small">Data is illustrative; consult professionals for diagnosis.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
